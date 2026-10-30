@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Tema Warna Biru AuniAir -->
+    <color name="primary_blue">#0A3981</color>
+    <color name="secondary_blue">#1F509A</color>
+    <color name="light_blue_bg">#E8F2FC</color>
+    <color name="light_blue_card">#D4E7F5</color>
+    <color name="accent_blue">#E38E49</color>
+    <color name="dark_gray">#333333</color>
+</resources>
