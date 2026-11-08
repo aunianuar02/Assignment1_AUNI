@@ -33,7 +33,7 @@
             android:textColor="@color/dark_gray"
             android:textSize="14sp" />
 
-        <!-- CARD 1: DEVELOPER DETAILS -->
+        <!-- DEVELOPER DETAILS -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CARD 2: ABOUT APPLICATION & CLICKABLE URL -->
+        <!-- ABOUT APPLICATION  -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -178,15 +178,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    android:text="This application to calculate estimates excess baggage fees for AuniAir passengers based on
-                    baggage weight, ticket class, and excess rate, and 8% service tax calculation."
+                    android:text="This application to calculate estimates excess baggage fees for AuniAir passengers based on baggage weight, ticket class, and excess rate, and 8% service tax calculation."
                     android:textColor="@color/dark_gray"
                     android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GitHub Repository (Clickable URL):"
+                    android:text="GitHub Repository Link:"
                     android:textColor="@color/dark_gray"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -198,19 +197,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="12dp"
-                    android:text="https://github.com/yourusername/ExcessBaggageCalculator"
+                    android:text="https://github.com/aunianuar02/Assignment1_AUNI"
                     android:textColor="@color/primary_blue"
                     android:textSize="13sp" />
-
-                <!-- Button GitHub -->
-                <Button
-                    android:id="@+id/btnOpenGithub"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/primary_blue"
-                    android:text="Open GitHub Repository"
-                    android:textColor="@color/white" />
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
