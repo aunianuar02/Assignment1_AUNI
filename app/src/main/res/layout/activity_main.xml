@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp">
 
-            <!-- 1. Gambar Latar Belakang Capal Terbang -->
+            <!-- Theme-->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -26,15 +26,13 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/bg_airplane" />
 
-            <!-- 2. Overlay Lapisan Gelap untuk Ejas Opacity (Boleh ubah warna/kegelapan) -->
+            <!-- opacity image -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#A60A3981" />
-            <!-- Nota Opacity (#A6 = 65% opacity, 0A3981 = Primary Blue) -->
-            <!-- Tukar kepada #800A3981 (50%), #CC0A3981 (80%), atau #99000000 (60% Hitam Transparent) -->
 
-            <!-- 3. Tajuk & Logo AuniAir -->
+            <!-- title bar-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -67,9 +65,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-
             </LinearLayout>
-
         </FrameLayout>
 
         <!-- MAIN CONTAINER -->
@@ -78,6 +74,41 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <!-- INSTRUCTION CARD  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="ℹ️ Instructions &amp; Allowance Rules"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. Enter total baggage weight (kg) and excess rate per kg (RM).\n2.Select your ticket class: Economy (20 kg free) or Business (40 kg free).\n3. Click 'Calculate' to view excess weight, charge, and total (incl. 8% SST)."
+                        android:textColor="@color/dark_gray"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- CARD USER INPUT -->
             <androidx.cardview.widget.CardView
@@ -97,10 +128,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:text="Baggage Form : "
                         android:textColor="@color/dark_gray"
                         android:textSize="14sp"
-                        android:layout_marginBottom="10dp"
                         android:textStyle="bold" />
 
                     <!-- Weight Input -->
