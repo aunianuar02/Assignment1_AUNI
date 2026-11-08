@@ -13,26 +13,25 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainAbout extends AppCompatActivity {
 
     private TextView tvGithubUrl;
-    private Button btnOpenGithub;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_about);
 
-        // Aktifkan butang Back (Up Navigation) pada ActionBar
+        // button back (Up Navigation) pada ActionBar
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("About AuniAir");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
         tvGithubUrl = findViewById(R.id.tvGithubUrl);
-        btnOpenGithub = findViewById(R.id.btnOpenGithub);
 
-        // Tetapkan URL dari MainActivity
+        //  URL dari MainActivity
         tvGithubUrl.setText(MainActivity.GITHUB_URL);
 
-        // 1. Klik pada TextView URL
+        // 1. TextView URL
         tvGithubUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +39,6 @@ public class MainAbout extends AppCompatActivity {
             }
         });
 
-        // 2. Klik pada Butang GitHub
-        btnOpenGithub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGithubLink();
-            }
-        });
     }
 
     private void openGithubLink() {
@@ -54,7 +46,7 @@ public class MainAbout extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
-    // Fungsi Apabila Butang Back pada ActionBar Ditekan
+    // Fungsi Apabila Button Back pada ActionBar Ditekan
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
