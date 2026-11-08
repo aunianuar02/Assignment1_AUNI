@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("Excess Baggage Calculation");
         }
 
-        // Inisialisasi Komponen UI
+        // declare variable
         etBaggageWeight = findViewById(R.id.etBaggageWeight);
         etExcessRate = findViewById(R.id.etExcessRate);
         rgTicketClass = findViewById(R.id.rgTicketClass);
@@ -92,25 +92,25 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            // Dapatkan jenis kelas tiket
+
             String ticketClass = rbEconomy.isChecked() ? "Economy" : "Business";
             double allowance = rbEconomy.isChecked() ? 20.0 : 40.0;
 
-            // Pengiraan
+            // calculation
             double excessWeight = Math.max(0, weight - allowance);
             double excessCharge = excessWeight * rate;
             double totalPayable = excessCharge + (0.08 * excessCharge);
 
-            // 1. Paparkan semula Input Pengguna
+            // display output
             tvInputSummary.setText(String.format(Locale.getDefault(),
                     "Class: %s | Weight: %.2f kg | Rate: RM %.2f", ticketClass, weight, rate));
 
-            // 2. Paparkan Hasil Pengiraan
+            // display calculation
             tvExcessWeight.setText(String.format(Locale.getDefault(), "Excess Baggage Weight: %.2f kg", excessWeight));
             tvExcessCharge.setText(String.format(Locale.getDefault(), "Excess Baggage Charge: RM %.2f", excessCharge));
             tvTotalPayable.setText(String.format(Locale.getDefault(), "Total Amount Payable (incl. 8%% tax): RM %.2f", totalPayable));
 
-            // 3. Semak Status Bayaran (Sama ada perlu bayar atau tidak)
+            // display status
             if (excessWeight <= 0) {
                 tvPaymentStatus.setText("Status: No extra charge required! (Within allowance)");
                 tvPaymentStatus.setTextColor(Color.parseColor("#2E7D32")); // Warna hijau
