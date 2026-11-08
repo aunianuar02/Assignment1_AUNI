@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvInputSummary, tvExcessWeight, tvExcessCharge, tvTotalPayable, tvPaymentStatus;
     private Button btnCalculate, btnClear;
 
-    public static final String GITHUB_URL = "https://github.com/yourusername/ExcessBaggageCalculator";
+    public static final String GITHUB_URL = "https://github.com/aunianuar02/Assignment1_AUNI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
